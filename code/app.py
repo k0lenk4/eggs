@@ -332,7 +332,7 @@ def main():
     uploaded_file = st.sidebar.file_uploader("Upload your image", 
                                            type=["jpg", "jpeg", "png"])
 
-    folder_path = "../data"
+    folder_path = "./data"
     if os.path.exists(folder_path):
         sample_files = [f for f in os.listdir(folder_path) if os.path.isfile(os.path.join(folder_path, f))]
         sample_file = st.sidebar.selectbox("Or select sample image", 
