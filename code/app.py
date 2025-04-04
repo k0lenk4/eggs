@@ -167,7 +167,7 @@ def white(image):
         captions = ["Original image"]
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = UNet(num_classes=1, num_blocks=3)
-        model.load_state_dict(torch.load("./best_model_epoch_9.pth", map_location=torch.device('cpu')))
+        model.load_state_dict(torch.load("best_model_epoch_9.pth", map_location=torch.device('cpu')))
         model.eval()
 
         image = transform(image)
@@ -207,7 +207,7 @@ def red(image):
         captions = ["Original image"]
         device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
         model = UNet(num_classes=1, num_blocks=3)
-        model.load_state_dict(torch.load("./best_model_epoch_9 (2).pth", map_location=torch.device('cpu')))
+        model.load_state_dict(torch.load("best_model_epoch_9 (2).pth", map_location=torch.device('cpu')))
         model.eval()
 
         image = transform(image)
@@ -238,7 +238,7 @@ def red(image):
 def process_yolo(image):
     temp_path = "temp_image.jpg"
     cv2.imwrite(temp_path, cv2.cvtColor(image, cv2.COLOR_RGB2BGR))
-    model = YOLO("./best.pt")
+    model = YOLO("best.pt")
     results = model.predict(temp_path, conf=0.5)
     os.remove(temp_path)
     result_image = image.copy()
