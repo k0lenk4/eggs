@@ -1,5 +1,5 @@
-from model import UNet
-from marph import countur, rgb_binarization, eros_dilat,  normalized
+from .model import UNet
+from .marph import countur, eros_dilat,  normalized
 from torchvision import transforms
 import torch
 import numpy as np

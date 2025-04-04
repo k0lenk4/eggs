@@ -3,9 +3,9 @@ import cv2
 import numpy as np
 from PIL import Image
 import os
-from yolo import process_yolo
-from red import red
-from white import white
+from .yolo import process_yolo
+from .red import red
+from .white import white
 
 def segment_image(image, mode):
     if mode == "Red eggs":

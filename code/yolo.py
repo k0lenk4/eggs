@@ -2,10 +2,6 @@ import cv2
 from ultralytics import YOLO 
 import os
 import numpy as np
-import cv2
-from ultralytics import YOLO 
-import os
-import numpy as np
 
 def process_yolo(image):
     temp_path = "temp_image.jpg"
